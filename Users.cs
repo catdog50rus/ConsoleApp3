@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleApp3
 {
-    class Users
+    public class Users
     {
         public string NicName { get; set; }
         public string Pass { get; set; }

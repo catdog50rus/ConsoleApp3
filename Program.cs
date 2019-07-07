@@ -8,15 +8,17 @@ namespace ConsoleApp3
     {
         public static void Main(string[] args)
         {
-            var user1 = new Users("catdog", "123");
-            Console.WriteLine($"Login: {user1.NicName}");
-            Console.WriteLine($"Password: {user1.Pass}");
+            var client1 = new Client("catdog", "123", "Алексей", 3000, "client", "catdog50rus@gmail.com", 39);
+            Console.WriteLine($"Role: {client1.Roll}");
+            Console.WriteLine($"Name: {client1.Name}");
+            Console.WriteLine($"CurrentSum: {client1.CurrentSum}");
+            Console.WriteLine();
 
-            var client1 = new Client(user1.NicName, 3000);
             client1.Put(500);
-            Console.WriteLine($"{client1.Name} CurrentSum: {client1.CurrentSum}");
+            Console.WriteLine($"{client1.Name} Put CurrentSum: {client1.CurrentSum}");
             client1.Withdraw(600);
-            Console.WriteLine($"{client1.Name} CurrentSum: {client1.CurrentSum}");
+            Console.WriteLine($"{client1.Name} WithDraw CurrentSum: {client1.CurrentSum}");
+            Console.WriteLine();
 
             ISchool pupil = new Person();
             IUniversity student = new Person();

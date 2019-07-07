@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleApp3
 {
-    class Client : IAccount, IClient
+    class Client : Users, IAccount, IClient
     {
         int _sum;
 
@@ -12,10 +12,17 @@ namespace ConsoleApp3
 
         public string Name { get; set; }
 
-        public Client(string name, int sum)
+        public string Roll { get; set; }
+        public string Email { get; set; }
+        public int Age { get; set; }
+
+        public Client(string nicName, string pass, string name, int sum, string roll, string email, int age) : base (nicName, pass)
         {
             Name = name;
             _sum = sum;
+            Roll = roll;
+            Email = email;
+            Age = age;
         }
 
         public void Put(int sum)
